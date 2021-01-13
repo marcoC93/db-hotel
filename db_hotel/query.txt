@@ -22,6 +22,10 @@ SELECT * FROM `ospiti` WHERE LOCATE('d' , `name`) = 1
 (versione MSSQL)
 SELECT * FROM `ospiti` WHERE CHARINDEX('d' , `name`) = 1
 
+(Versione con “LIKE”)
+SELECT * FROM `ospiti` WHERE `name` LIKE 'D%'
+
+
 Calcola il totale degli ordini accepted
 
 	SELECT * FROM `pagamenti` WHERE `status` = 'accepted'
@@ -31,5 +35,12 @@ Qual è il prezzo massimo pagato?
 	SELECT MAX(`PRICE`) FROM (`pagamenti`) 
 
 Seleziona gli ospiti riconosciuti con patente e nati nel 1975
+
+	SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND YEAR(`date_of_birth`) < 1975	
+
 Quanti paganti sono anche ospiti?
+
+	
+
 Quanti posti letto ha l’hotel in totale?
+SELECT COUNT(beds) FROM stanze
