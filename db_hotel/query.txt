@@ -23,6 +23,9 @@ SELECT * FROM `ospiti` WHERE LOCATE('d' , `name`) = 1
 SELECT * FROM `ospiti` WHERE CHARINDEX('d' , `name`) = 1
 
 Calcola il totale degli ordini accepted
+
+	SELECT * FROM `pagamenti` WHERE `status` = 'accepted'
+
 Qual è il prezzo massimo pagato?
 Seleziona gli ospiti riconosciuti con patente e nati nel 1975
 Quanti paganti sono anche ospiti?
