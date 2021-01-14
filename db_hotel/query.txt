@@ -39,8 +39,8 @@ Seleziona gli ospiti riconosciuti con patente e nati nel 1975
 	SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND YEAR(`date_of_birth`) < 1975	
 
 Quanti paganti sono anche ospiti?
-
+SELECT COUNT(*) FROM `paganti` WHERE `ospiti_id` IS NOT NULL
 	
 
 Quanti posti letto ha l’hotel in totale?
-SELECT COUNT(beds) FROM stanze
+SELECT SUM(beds) FROM stanze
