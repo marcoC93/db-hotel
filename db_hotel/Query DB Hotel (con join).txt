@@ -27,7 +27,10 @@ Conta quante volte è stata prenotata ogni stanza
 
 Fai una analisi per vedere se ci sono ore in cui le prenotazioni sono più frequenti
 
-	
+	SELECT COUNT(*) AS `numero_prenotazioni`, 				   	HOUR(`created_at`) AS `orario` 
+	FROM `prenotazioni`
+	GROUP BY HOUR(`created_at`)
+	ORDER BY `numero_prenotazioni` DESC
 
 Quante prenotazioni ha fatto l’ospite che ha fatto più prenotazioni?
 
