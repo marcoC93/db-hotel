@@ -22,7 +22,8 @@ Somma i prezzi dei pagamenti raggruppandoli per status
 
 Conta quante volte è stata prenotata ogni stanza
 
-	
+	SELECT COUNT(`id`) FROM `prenotazioni`
+ 	GROUP by `stanza_id`
 
 Fai una analisi per vedere se ci sono ore in cui le prenotazioni sono più frequenti
 Quante prenotazioni ha fatto l’ospite che ha fatto più prenotazioni?
